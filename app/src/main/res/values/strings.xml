@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SimpleCalculator</string>
+    <string name="zero">0</string>
+    <string name="double_zero">00</string>
+    <string name="um">1</string>
+    <string name="dois">2</string>
+    <string name="tres">3</string>
+    <string name="quatro">4</string>
+    <string name="cinco">5</string>
+    <string name="seis">6</string>
+    <string name="sete">7</string>
+    <string name="oito">8</string>
+    <string name="nove">9</string>
+    <string name="adicao">\u002B</string>
+    <string name="subtracao">\u2212</string>
+    <string name="multiplicacao">\u0007</string>
+    <string name="division">\u00F7</string>
+    <string name="equals">\u003D</string>
+    <string name="decimal_ponto">,</string>
+    <string name="plus_minus">\u00B1</string>
+    <string name="percentage">\u0025</string>
+    <string name="all_clear">AC</string>
+
+
+
+
+
+
+
+
+</resources>
