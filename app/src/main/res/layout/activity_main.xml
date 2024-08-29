@@ -6,73 +6,197 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <View
+        android:id="@+id/viewDisplay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/display_backgroud"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    
+    <TextView
+        android:id="@+id/textInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="end"
+        android:text="@string/zero"
+        android:textColor="@color/primary_text"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divisor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textEquation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="end"
+        android:textColor="@color/secondary_text"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/textInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageNightMode"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/divisor"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@color/divider"
+        app:layout_constraintBottom_toBottomOf="@id/viewDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    
     <TableLayout
         android:id="@+id/ButtonContainer"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/buttons_background"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="H, 1:1"
+        app:layout_constraintDimensionRatio="W, 1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <TableRow android:layout_weight="1">
-
             <Button
                 android:id="@+id/buttonAllClear"
                 style="@style/AllClearButton"
-                android:text="@string/all_clear"
-                />
+                android:text="@string/all_clear" />
 
             <Button
                 android:id="@+id/buttonPlusMinus"
                 style="@style/ActionButton"
-                android:text="@string/plus_minus"
-                />
+                android:text="@string/plus_minus" />
 
             <Button
                 android:id="@+id/buttonPercentage"
                 style="@style/ActionButton"
-                android:text="@string/percentage"
-                />
+                android:text="@string/percentage" />
 
             <Button
                 android:id="@+id/buttonDivision"
                 style="@style/ActionButton"
-                android:text="@string/division"
+                android:text="@string/division"/>
+        </TableRow>
 
 
+
+        <TableRow android:layout_weight="1">
+            <Button
+                android:id="@+id/buttonSete"
+                style="@style/CalculatorButton"
+                android:text="@string/sete"
+                />
+
+            <Button
+                android:id="@+id/buttonOito"
+                style="@style/CalculatorButton"
+                android:text="@string/oito"
+                />
+
+            <Button
+                android:id="@+id/buttonNove"
+                style="@style/CalculatorButton"
+                android:text="@string/nove"
+                />
+
+            <Button
+                android:id="@+id/buttonMultiplicacao"
+                style="@style/ActionButton"
+                android:text="@string/multiplicacao"/>
         </TableRow>
 
         <TableRow android:layout_weight="1">
-
             <Button
-                android:id="@+id/buttonAllClear"
-                style="@style/AllClearButton"
-                android:text="@string/all_clear"
+                android:id="@+id/buttonQuatro"
+                style="@style/CalculatorButton"
+                android:text="@string/quatro"
                 />
 
             <Button
-                android:id="@+id/buttonPlusMinus"
-                style="@style/ActionButton"
-                android:text="@string/plus_minus"
+                android:id="@+id/buttonCinco"
+                style="@style/CalculatorButton"
+                android:text="@string/cinco"
                 />
 
             <Button
-                android:id="@+id/buttonPercentage"
-                style="@style/ActionButton"
-                android:text="@string/percentage"
+                android:id="@+id/buttonSeis"
+                style="@style/CalculatorButton"
+                android:text="@string/seis"
                 />
 
             <Button
-                android:id="@+id/buttonDivision"
+                android:id="@+id/buttonSubtracao"
                 style="@style/ActionButton"
-                android:text="@string/division"
-
-
+                android:text="@string/subtracao"/>
         </TableRow>
 
+        <TableRow android:layout_weight="1">
+            <Button
+                android:id="@+id/buttonUm"
+                style="@style/CalculatorButton"
+                android:text="@string/um"
+                />
 
+            <Button
+                android:id="@+id/buttonDois"
+                style="@style/CalculatorButton"
+                android:text="@string/dois"
+                />
+
+            <Button
+                android:id="@+id/buttonTres"
+                style="@style/CalculatorButton"
+                android:text="@string/tres"
+                />
+
+            <Button
+                android:id="@+id/buttonAdicao"
+                style="@style/ActionButton"
+                android:text="@string/adicao"/>
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+            <Button
+                android:id="@+id/buttonZero"
+                style="@style/CalculatorButton"
+                android:text="@string/zero"/>
+            <Button
+                android:id="@+id/buttonZeroZero"
+                style="@style/CalculatorButton"
+                android:text="@string/double_zero"
+                />
+
+            <Button
+                android:id="@+id/buttonPonto"
+                style="@style/CalculatorButton"
+                android:text="@string/decimal_ponto"
+                />
+
+            <Button
+                android:id="@+id/buttonIgual"
+                style="@style/ActionButton"
+                android:text="@string/equals"
+                />
+        </TableRow>
     </TableLayout>
 
 

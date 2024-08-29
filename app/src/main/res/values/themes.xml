@@ -3,6 +3,7 @@
     <style name="Base.Theme.SimpleCalculator" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/status_bar</item>
     </style>
 
     <style name="Theme.SimpleCalculator" parent="Base.Theme.SimpleCalculator" />
@@ -25,11 +26,6 @@
 
     <style name="ActionButton" parent="CalculatorButton">
         <item name="android:textColor">@color/action_text</item>
-    </style>
-    
-    <style name="EqualButton" parent="CalculatorButton">
-        <item name="android:backgroundTint">@color/equal_button_background</item>
-        <item name="android:textColor">@color/equal_button_text</item>
     </style>
 
 </resources>

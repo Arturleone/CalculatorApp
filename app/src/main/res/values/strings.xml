@@ -13,7 +13,7 @@
     <string name="nove">9</string>
     <string name="adicao">\u002B</string>
     <string name="subtracao">\u2212</string>
-    <string name="multiplicacao">\u0007</string>
+    <string name="multiplicacao">\u00D7</string>
     <string name="division">\u00F7</string>
     <string name="equals">\u003D</string>
     <string name="decimal_ponto">,</string>
