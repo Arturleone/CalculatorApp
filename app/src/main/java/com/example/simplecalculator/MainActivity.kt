@@ -1,5 +1,6 @@
 package com.example.simplecalculator
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -45,8 +46,13 @@ class MainActivity : AppCompatActivity() {
             buttonPlusMinus.setOnClickListener{onPlusMinusClicked()}
             buttonPercentage.setOnClickListener{onPercentageClicked()}
             imageNightMode.setOnClickListener{toggleNightMode()}
-
+            addScreen.setOnClickListener{addActivityScreen()}
         }
+    }
+
+    private fun addActivityScreen () {
+        startActivity(Intent(this, activity_currency::class.java))
+        finish()
     }
 
     private fun setNightModeIndicator() {

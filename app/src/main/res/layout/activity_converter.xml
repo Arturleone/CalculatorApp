@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_currency">
+
+    <View
+        android:id="@+id/viewDisplay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/display_backgroud"
+        app:layout_constraintBottom_toBottomOf="@+id/ButtonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/ButtonContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/buttons_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="W, 1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow android:layout_weight="1">
+            <Button
+                android:id="@+id/button7"
+                style="@style/CalculatorButton"
+                android:text="@string/sete"
+                />
+
+            <Button
+                android:id="@+id/button8"
+                style="@style/CalculatorButton"
+                android:text="@string/oito"
+                />
+
+            <Button
+                android:id="@+id/button9"
+                style="@style/CalculatorButton"
+                android:text="@string/nove"
+                />
+
+            <Button
+                android:id="@+id/buttonDelete"
+                style="@style/ActionButton"
+                android:text="⌫"/>
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+            <Button
+                android:id="@+id/button4"
+                style="@style/CalculatorButton"
+                android:text="@string/quatro"
+                />
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/CalculatorButton"
+                android:text="@string/cinco"
+                />
+
+            <Button
+                android:id="@+id/button6"
+                style="@style/CalculatorButton"
+                android:text="@string/seis"
+                />
+
+            <Button
+                android:id="@+id/buttonClear"
+                style="@style/AllClearButton"
+                android:text="C"/>
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+            <Button
+                android:id="@+id/button1"
+                style="@style/CalculatorButton"
+                android:text="@string/um"
+                />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/CalculatorButton"
+                android:text="@string/dois"
+                />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/CalculatorButton"
+                android:text="@string/tres"
+                />
+
+            <Button
+                android:id="@+id/button0"
+                style="@style/CalculatorButton"
+                android:text="@string/zero"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollViewHorizontal"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewDisplay">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/conversorMoeda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moeda"
+                style="@style/CalculatorButtonSmall"
+                android:gravity="center"
+                />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Área"
+                style="@style/CalculatorButtonSmall" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comprimento"
+                style="@style/CalculatorButtonSmall" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatura"
+                style="@style/CalculatorButtonSmall" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volume"
+                style="@style/CalculatorButtonSmall" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Massa"
+                style="@style/CalculatorButtonSmall" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dados"
+                style="@style/CalculatorButtonSmall" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Velocidade"
+                style="@style/CalculatorButtonSmall" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tempo"
+                style="@style/CalculatorButtonSmall" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backgroundConverso"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewHorizontal" />
+
+
+
+    <ImageView
+        android:id="@+id/backSeta"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_24"
+        style="@style/CalculatorButton"
+        />
+
+    <TextView
+
+        android:layout_width="237dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="28dp"
+        android:text="Conversor"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/backSeta"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/CalculatorButton"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

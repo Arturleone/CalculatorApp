@@ -52,7 +52,7 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -198,6 +198,18 @@
                 />
         </TableRow>
     </TableLayout>
+
+    <ImageView
+        android:id="@+id/addScreen"
+        android:layout_width="44dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_transform_24"
+
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
