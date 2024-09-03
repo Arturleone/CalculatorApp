@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <View
-        android:id="@+id/backGround"
+        android:id="@+id/backGroundComprimento"
         android:layout_width="match_parent"
         android:layout_height="320dp"
         android:background="@color/display_backgroud"
@@ -49,19 +49,18 @@
         app:layout_constraintTop_toBottomOf="@+id/divisor2" />
 
     <Spinner
-        android:id="@+id/spinnerTo"
+        android:id="@+id/spinnerToComprimento"
         android:layout_width="114dp"
         android:layout_height="47dp"
         android:layout_marginTop="16dp"
         android:padding="10dp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divisor2" />
 
     <TextView
-        android:id="@+id/tvResult"
+        android:id="@+id/tvResultComprimento"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -74,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divisor2" />
 
     <TextView
-        android:id="@+id/tvDisplay"
+        android:id="@+id/tvDisplayComprimento"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -87,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divisor" />
 
     <Spinner
-        android:id="@+id/spinnerFrom"
+        android:id="@+id/spinnerFromComprimento"
         android:layout_width="114dp"
         android:layout_height="47dp"
         android:layout_marginTop="4dp"

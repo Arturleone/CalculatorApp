@@ -5,8 +5,6 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.simplecalculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -50,8 +48,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+
     private fun addActivityScreen () {
-        startActivity(Intent(this, activity_currency::class.java))
+        startActivity(Intent(this, Activity_Currency::class.java))
         finish()
     }
 

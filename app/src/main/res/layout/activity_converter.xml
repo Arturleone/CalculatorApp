@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_currency">
+    tools:context=".Activity_Currency">
 
     <View
         android:id="@+id/viewDisplay"
@@ -47,7 +47,7 @@
                 />
 
             <Button
-                android:id="@+id/buttonDelete"
+                android:id="@+id/buttonDelete2"
                 style="@style/ActionButton"
                 android:text="⌫"/>
         </TableRow>
@@ -134,6 +134,7 @@
                 android:layout_height="match_parent"/>
 
             <TextView
+                android:id="@+id/buttonArea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Área"
@@ -144,6 +145,7 @@
                 android:layout_height="match_parent"/>
 
             <TextView
+                android:id="@+id/buttonComprimento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Comprimento"
@@ -154,16 +156,7 @@
                 android:layout_height="match_parent"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Temperatura"
-                style="@style/CalculatorButtonSmall" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="match_parent"/>
-
-            <TextView
+                android:id="@+id/buttonVolume"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Volume"
@@ -174,39 +167,10 @@
                 android:layout_height="match_parent"/>
 
             <TextView
+                android:id="@+id/buttonMassa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Massa"
-                style="@style/CalculatorButtonSmall" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="match_parent"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dados"
-                style="@style/CalculatorButtonSmall" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="match_parent"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Velocidade"
-                style="@style/CalculatorButtonSmall" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="match_parent"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tempo"
                 style="@style/CalculatorButtonSmall" />
 
             <Space
@@ -218,7 +182,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/backgroundConverso"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/ButtonContainer"
         app:layout_constraintEnd_toEndOf="parent"

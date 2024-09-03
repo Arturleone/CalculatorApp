@@ -13,7 +13,7 @@
         android:theme="@style/Theme.SimpleCalculator"
         tools:targetApi="31">
         <activity
-            android:name=".activity_currency"
+            android:name=".Activity_Currency"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

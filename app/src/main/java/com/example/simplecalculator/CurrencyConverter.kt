@@ -1,56 +1,23 @@
 package com.example.simplecalculator
 
-import android.content.Intent
-import android.os.Bundle
-import android.view.LayoutInflater
+import android.content.Context
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import java.text.DecimalFormat
 
-class activity_currency : AppCompatActivity() {
+class CurrencyConverter(
+    private val context: Context,
+    private val tvDisplay: TextView,
+    private val tvResult: TextView,
+    private val spinnerFrom: Spinner,
+    private val spinnerTo: Spinner
+) {
 
-    private lateinit var tvDisplay: TextView
-    private lateinit var tvResult: TextView
-    private lateinit var spinnerFrom: Spinner
-    private lateinit var spinnerTo: Spinner
     private var currentAmount: String = ""
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_converter)
-
-        findViewById<ImageView>(R.id.backSeta).setOnClickListener{
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        }
-
-        // Setup click listener for the TextView to inflate the new layout
-        findViewById<TextView>(R.id.conversorMoeda).setOnClickListener {
-            inflateCurrencyConverterLayout()
-        }
-    }
-
-    private fun inflateCurrencyConverterLayout() {
-        val layoutInterno = findViewById<ConstraintLayout>(R.id.backgroundConverso)
-        layoutInterno.removeAllViews()  // Clear any existing views
-        val inflatedLayout = layoutInflater.inflate(R.layout.currencyconverter, layoutInterno, true)
-
-        // Initialize views from the inflated layout
-        tvDisplay = inflatedLayout.findViewById(R.id.tvDisplay)
-        tvResult = inflatedLayout.findViewById(R.id.tvResult)
-        spinnerFrom = inflatedLayout.findViewById(R.id.spinnerFrom)
-        spinnerTo = inflatedLayout.findViewById(R.id.spinnerTo)
-
-        // Setup spinners and buttons after inflating the layout
-        setupSpinners()
-        setupButtons()
-
-    }
-
-    private fun setupSpinners() {
+    fun setupSpinners() {
         val currencies = arrayOf("USD", "EUR", "BRL")
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, currencies)
+        val adapter = ArrayAdapter(context, android.R.layout.simple_spinner_item, currencies)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerFrom.adapter = adapter
         spinnerTo.adapter = adapter
@@ -72,24 +39,19 @@ class activity_currency : AppCompatActivity() {
         }
     }
 
-    private fun setupButtons() {
-        val buttonIds = listOf(
-            R.id.button0, R.id.button1, R.id.button2, R.id.button3,
-            R.id.button4, R.id.button5, R.id.button6, R.id.button7,
-            R.id.button8, R.id.button9
-        )
-
+    fun setupButtons(buttonIds: List<Int>) {
         for (id in buttonIds) {
-            findViewById<Button>(id).setOnClickListener { button ->
-                appendToAmount((button as Button).text.toString())
-            }
+            val button = (context as? AppCompatActivity)?.findViewById<Button>(id)
+            button?.setOnClickListener { appendToAmount(button.text.toString()) }
         }
 
-        findViewById<Button>(R.id.buttonDelete).setOnClickListener {
+        val buttonDelete = (context as? AppCompatActivity)?.findViewById<Button>(R.id.buttonDelete2)
+        buttonDelete?.setOnClickListener {
             removeLastDigit()
         }
 
-        findViewById<Button>(R.id.buttonClear).setOnClickListener {
+        val buttonClear = (context as? AppCompatActivity)?.findViewById<Button>(R.id.buttonClear)
+        buttonClear?.setOnClickListener {
             clearAmount()
         }
     }
