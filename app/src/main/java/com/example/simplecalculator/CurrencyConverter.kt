@@ -17,7 +17,7 @@ class CurrencyConverter(
 
     fun setupSpinners() {
         val currencies = arrayOf("USD", "EUR", "BRL")
-        val adapter = ArrayAdapter(context, android.R.layout.simple_spinner_item, currencies)
+        val adapter = ArrayAdapter(context, R.layout.spinner, currencies)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerFrom.adapter = adapter
         spinnerTo.adapter = adapter

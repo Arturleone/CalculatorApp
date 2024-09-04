@@ -6,8 +6,13 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import retrofit2.Call
+import retrofit2.http.GET
+import retrofit2.http.Query
 
 class Activity_Currency : AppCompatActivity() {
+
+
 
     private lateinit var currencyConverter: CurrencyConverter
 
@@ -55,8 +60,11 @@ class Activity_Currency : AppCompatActivity() {
         val massaConverter = MassaConverter(this, tvDisplay, tvResult, spinnerFrom, spinnerTo)
 
         massaConverter.setupSpinners()
-        massaConverter.setupButtons()
-
+        massaConverter.setupButtons(listOf(
+            R.id.button0, R.id.button1, R.id.button2, R.id.button3,
+            R.id.button4, R.id.button5, R.id.button6, R.id.button7,
+            R.id.button8, R.id.button9
+        ))
     }
 
     private fun inflateComprimentoConverterLayout() {
@@ -66,11 +74,14 @@ class Activity_Currency : AppCompatActivity() {
         val tvResult = inflatedLayout.findViewById<TextView>(R.id.tvResultComprimento)
         val spinnerFrom = inflatedLayout.findViewById<Spinner>(R.id.spinnerFromComprimento)
         val spinnerTo = inflatedLayout.findViewById<Spinner>(R.id.spinnerToComprimento)
-        val comprimentoConverter =
-            VolumeConverter(this, tvDisplay, tvResult, spinnerFrom, spinnerTo)
+        val comprimentoConverter = ComprimentoConverter(this, tvDisplay, tvResult, spinnerFrom, spinnerTo)
 
         comprimentoConverter.setupSpinners()
-        comprimentoConverter.setupButtons()
+        comprimentoConverter.setupButtons(listOf(
+            R.id.button0, R.id.button1, R.id.button2, R.id.button3,
+            R.id.button4, R.id.button5, R.id.button6, R.id.button7,
+            R.id.button8, R.id.button9
+        ))
 
     }
 
@@ -84,7 +95,11 @@ class Activity_Currency : AppCompatActivity() {
         val volumeConverter = VolumeConverter(this, tvDisplay, tvResult, spinnerFrom, spinnerTo)
 
         volumeConverter.setupSpinners()
-        volumeConverter.setupButtons()
+        volumeConverter.setupButtons(listOf(
+            R.id.button0, R.id.button1, R.id.button2, R.id.button3,
+            R.id.button4, R.id.button5, R.id.button6, R.id.button7,
+            R.id.button8, R.id.button9
+        ))
 
     }
 
@@ -98,7 +113,13 @@ class Activity_Currency : AppCompatActivity() {
         val areaConverter = AreaConverter(this, tvDisplay, tvResult, spinnerFrom, spinnerTo)
 
         areaConverter.setupSpinners()
-        areaConverter.setupButtons()
+        areaConverter.setupButtons(
+            listOf(
+                R.id.button0, R.id.button1, R.id.button2, R.id.button3,
+                R.id.button4, R.id.button5, R.id.button6, R.id.button7,
+                R.id.button8, R.id.button9
+            )
+        )
 
     }
 
